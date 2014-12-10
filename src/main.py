@@ -14,17 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+import logging
 import os
 import webapp2
 from google.appengine.ext.webapp import template
-
-#logging用のおまじない
-from logging import getLogger,StreamHandler,DEBUG
-logger = getLogger(__name__)
-handler = StreamHandler()
-handler.setLevel(DEBUG)
-logger.setLevel(DEBUG)
-logger.addHandler(handler)
 
 ROOTPATH = os.path.dirname(__file__)
 TEMPLATEPATH = os.path.join(ROOTPATH, 'templates')
