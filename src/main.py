@@ -1,3 +1,4 @@
+#　-*- coding: utf-8 -*-
 #!/usr/bin/env python
 #
 # Copyright 2007 Google Inc.
@@ -14,17 +15,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-import os
-import webapp2
+import logging
+import os, webapp2
 from google.appengine.ext.webapp import template
-
-#logging用のおまじない
-from logging import getLogger,StreamHandler,DEBUG
-logger = getLogger(__name__)
-handler = StreamHandler()
-handler.setLevel(DEBUG)
-logger.setLevel(DEBUG)
-logger.addHandler(handler)
 
 ROOTPATH = os.path.dirname(__file__)
 TEMPLATEPATH = os.path.join(ROOTPATH, 'templates')
