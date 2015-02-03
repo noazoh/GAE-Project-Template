@@ -40,7 +40,7 @@ Remove this if you use the .htaccess -->
 	<script>document.getElementById("JSNG").style.display = "none";</script>
 	
 	<!-- check Browser -->
-	<div id="BROUSERNG" class="alert alert-danger">
+	<div id="BROUSERNG" class="alert alert-danger" style="display: none">
 	<p>このページは、次のいずれかのブラウザで閲覧することを推奨しています。</p>
 	<ul>
 		<li>Google Chrome</li>
@@ -73,7 +73,7 @@ Remove this if you use the .htaccess -->
 			console.debug("safari");
 			valid = true;
 		}else if(userAgent.indexOf("firefox") != -1){
-			console.debug("firefix");
+			console.debug("firefox");
 			valid = true;
 		}else if(userAgent.indexOf("trident/7") != -1){
 			//IE11
@@ -93,13 +93,13 @@ Remove this if you use the .htaccess -->
 			//other
 			console.debug("other");
 		}
-		if(valid){
-			document.getElementById("BROUSERNG").style.display = "none";			
+		if(!valid){
+			document.getElementById("BROUSERNG").style.display = "block";			
 		}
-		</script>
+	</script>
 	
 	<!-- if javascript ON -->	
-	<div class="container" id="JSOK" style="display: 'none';">
+	<div class="container" id="JSOK" style="display: none">
 	<header>
 	<h2>メニュー</h2>
 	</header>
